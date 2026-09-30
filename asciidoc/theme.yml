@@ -1,0 +1,81 @@
+extends: default
+font:
+  catalog:
+    merge: true
+    NotoSansJP:
+      normal: NotoSansJP-Regular.ttf
+      bold: NotoSansJP-Bold.ttf
+      italic: NotoSansJP-Regular.ttf
+      bold_italic: NotoSansJP-Bold.ttf
+page:
+  size: A4
+  margin: [20mm, 15mm, 20mm, 15mm]
+base:
+  font-family: NotoSansJP
+  font-size: 10.5
+  line-height: 1.6
+  text-align: left
+prose:
+  text-indent: 0
+heading:
+  font-family: NotoSansJP
+  font-style: bold
+  h2-font-size: 16
+  h3-font-size: 13
+  h4-font-size: 11.5
+  h5-font-size: 10.5
+  h6-font-size: 10.5
+  h2-margin-top: 0
+  h3-margin-top: 18
+  h4-margin-top: 16
+  h5-margin-top: 14
+  h6-margin-top: 12
+  margin-bottom: 6
+table:
+  head-background-color: '#e6e6e6'
+header:
+  title-style: basic
+  height: 14mm
+  font-size: 9
+  border-width: 0.5
+  columns: <50% >50%
+  recto:
+    left:
+      content: '{doc-title}'
+    right:
+      content: '第{chapter-numeral}章 {chapter-title}'
+  verso:
+    left:
+      content: $header-recto-left-content
+    right:
+      content: $header-recto-right-content
+footer:
+  title-style: basic
+  height: 14mm
+  font-size: 9
+  border-width: 0.5
+  columns: <35% =30% >35%
+  recto:
+    left:
+      content: '{doc-footer}'
+    center:
+      content: '{page-number} / {page-count}'
+    right:
+      content: '第{chapter-numeral}章 {chapter-title}'
+  verso:
+    left:
+      content: $footer-recto-left-content
+    center:
+      content: $footer-recto-center-content
+    right:
+      content: $footer-recto-right-content
+caption:
+  align: center
+image:
+  caption-align: center
+table-header-cell:
+  background-color: '#e6e6e6'
+  font-style: bold
+description-list:
+  # [horizontal] で番号を手書きした箇条書き用：番号を太字にしない
+  term-font-style: normal
